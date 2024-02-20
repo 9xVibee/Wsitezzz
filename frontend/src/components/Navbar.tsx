@@ -10,11 +10,15 @@ import {
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between px-8 py-2">
-      <h1 className="text-5xl font-zyada font-extrabold">W.</h1>
-      <div className="flex items-center gap-4">
+    <div className="flex w-full justify-between px-4 sm:px-6 md:px-8 py-2 glassMorphisom fixed top-0 left-0 z-10">
+      <Link to={"/"}>
+        <h1 className="text-5xl font-zyada font-extrabold overflow-y-hidden">
+          W.
+        </h1>
+      </Link>
+      <div className="flex items-center gap-2 sm:gap-4">
         {/* feedback */}
-        <p className="flex items-center text-[1.1rem] gap-1 bg-gray-200 px-2 rounded-xl cursor-pointer">
+        <p className="hidden items-center text-[1.1rem] gap-1 bg-gray-200 px-2 rounded-xl cursor-pointer sm:flex">
           Feedback <MessageSquareText className="size-5 mt-1" />
         </p>
 
@@ -22,7 +26,7 @@ const Navbar = () => {
         <TooltipProvider>
           <Tooltip delayDuration={1}>
             <TooltipTrigger>
-              <Link to={"/search"}>
+              <Link to={"/tweets"} className="sm:block hidden">
                 <p className="hover:bg-gray-200 cursor-pointer py-2 px-2 rounded-full transition-colors duration-300">
                   <Twitter />
                 </p>
@@ -36,7 +40,7 @@ const Navbar = () => {
         <TooltipProvider>
           <Tooltip delayDuration={1}>
             <TooltipTrigger>
-              <Link to={"/search"}>
+              <Link to={"/submit-website"}>
                 <p className="hover:bg-gray-200 cursor-pointer py-2 px-2 rounded-full transition-colors duration-300">
                   <Rocket />
                 </p>

@@ -1,5 +1,12 @@
+import WebsiteOfTheDay from "@/components/WebsiteOfTheDay";
+
 const Home = () => {
-  return <div className="">Home</div>;
+  window.document.title = "W | Sitezz | Home";
+  return (
+    <div className="w-full h-fit">
+      <WebsiteOfTheDay />
+    </div>
+  );
 };
 
 export default Home;
