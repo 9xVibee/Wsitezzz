@@ -4,8 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  overflow-x: hidden;
+.hideScrollBar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .glassMorphisom {
